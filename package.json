@@ -1,0 +1,66 @@
+{
+  "name": "vscode-tree-file-size",
+  "displayName": "Tree File Size",
+  "description": "Displays file and folder sizes in the VS Code Explorer tooltip, with .gitignore support and configurable units.",
+  "readme": "README.md",
+  "pricing": "Free",
+  "icon": "icon.png",
+  "publisher": "hoolby",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoolby/vscode-tree-file-size"
+  },
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Tree File Size",
+      "properties": {
+        "treeFileSize.unit": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "b",
+            "kb",
+            "mb",
+            "gb",
+            "tb"
+          ],
+          "default": "auto",
+          "description": "Unit to display file sizes in"
+        },
+        "treeFileSize.respectGitignore": {
+          "type": "boolean",
+          "default": true,
+          "description": "Ignore files and folders listed in .gitignore when calculating size."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ignore": "^7.0.4"
+  }
+}
