@@ -89,4 +89,4 @@ We'd love that too! But VS Code's extension API doesn't allow us to add custom t
 
 ## 💡 Feedback & Contributions
 
-Found a bug? Have an idea? PRs and issues welcome! [GitHub repo](https://github.com/your-repo/tree-file-size)
+Found a bug? Have an idea? PRs and issues welcome! [GitHub repo](https://github.com/hoolby/vscode-tree-file-size/)
